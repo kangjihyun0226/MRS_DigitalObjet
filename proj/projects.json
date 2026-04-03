@@ -1,0 +1,58 @@
+[
+  {
+    "id": "bcy",
+    "title": "Loop Jack",
+    "madeBy": "백채이",
+    "htmlPath": "./bcy/proj.html",
+    "themeColor": "#6C1B00"
+  },
+  {
+    "id": "jjy",
+    "title": "무한 계단",
+    "madeBy": "정지윤",
+    "htmlPath": "./jjy/proj.html",
+    "themeColor": "#003366"
+  },
+  {
+    "id": "kgh",
+    "title": "중력시계",
+    "madeBy": "강지현",
+    "htmlPath": "./kgh/proj.html",
+    "themeColor": "#1a1a1a"
+  },
+  {
+    "id": "kjh",
+    "title": "Time Hexahedron",
+    "madeBy": "강제헌",
+    "htmlPath": "./kjh/proj.html",
+    "themeColor": "#2a2a2a"
+  },
+  {
+    "id": "lhm",
+    "title": "숨 쉬는 시간",
+    "madeBy": "이현민",
+    "htmlPath": "./lhm/proj.html",
+    "themeColor": "#3a3a3a"
+  },
+  {
+    "id": "lym",
+    "title": "시간 폴더",
+    "madeBy": "이영민",
+    "htmlPath": "./lym/proj.html",
+    "themeColor": "#4a4a4a"
+  },
+  {
+    "id": "psh",
+    "title": "파동(波動)",
+    "madeBy": "박시현",
+    "htmlPath": "./psh/proj.html",
+    "themeColor": "#5a5a5a"
+  },
+  {
+    "id": "ssb",
+    "title": "collision clock",
+    "madeBy": "신수빈",
+    "htmlPath": "./ssb/proj.html",
+    "themeColor": "#6a6a6a"
+  }
+]

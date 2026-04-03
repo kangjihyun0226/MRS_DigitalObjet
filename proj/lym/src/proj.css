@@ -1,0 +1,401 @@
+:root {
+  --bg: #e9e9ea;
+  --panel: #ffffff;
+  --ink: #111;
+  --muted: #666;
+  --line: #cfcfcf;
+
+  --tabBar: #dddddd;
+  --tab: #e6e6e6;
+  --tabActive: #ffd7e6;
+  --tabActiveLine: #ff9ec0;
+
+  --radius: 0.94vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    "Noto Sans KR",
+    sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+header {
+  display: block;
+}
+
+.app {
+  height: calc(100vh - 5.56vh);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-top: 5.56vh;
+}
+
+/* ===== Tabs ===== */
+.topbar {
+  padding: 1.3vh 0.94vw 0;
+  flex: 0 0 auto;
+}
+
+.folderTabs {
+  background: var(--tabBar);
+  border: 1px solid var(--line);
+  border-bottom: none;
+  border-top-left-radius: 0.52vw;
+  border-top-right-radius: 0.52vw;
+
+  display: flex;
+  align-items: stretch;
+  padding: 0.74vh 0.42vw 0;
+  overflow: hidden;
+}
+
+.folderTab {
+  flex: 1 1 0;
+  min-width: 0;
+
+  background: var(--tab);
+  border: 1px solid var(--line);
+  border-bottom: none;
+
+  height: 4.07vh;
+  padding: 0 0.52vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 850;
+  font-size: 0.73vw;
+  letter-spacing: 0.01em;
+
+  border-top-left-radius: 0.52vw;
+  border-top-right-radius: 0.52vw;
+
+  margin-left: 0.31vw;
+  user-select: none;
+  cursor: pointer;
+
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
+}
+.folderTab:first-child {
+  margin-left: 0;
+}
+
+.folderTab span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.folderTab.active {
+  background: var(--tabActive);
+  border-color: var(--tabActiveLine);
+  position: relative;
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.folderTab.active::after {
+  content: "";
+  position: absolute;
+  left: 0.52vw;
+  right: 0.52vw;
+  top: 0.56vh;
+  height: 2px;
+  background: var(--tabActiveLine);
+  border-radius: 999px;
+  opacity: 0.9;
+}
+
+/* ===== Layout ===== */
+.panel {
+  padding: 0 0.94vw 1.67vh;
+  flex: 1 1 auto;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.3vh;
+}
+
+.hero {
+  flex: 1 1 auto;
+  min-height: 0;
+
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  border-top-left-radius: 0.63vw;
+  border-top-right-radius: 0.63vw;
+
+  padding: 1.67vh;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.67vh;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.hero-text h1 {
+  margin: 0 0 0.93vh;
+  font-size: clamp(1.35vw, 3.2vw, 2.4vw);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hero-text p {
+  margin: 0 0 1.3vh;
+  color: var(--muted);
+  font-size: clamp(0.73vw, 1.2vw, 0.83vw);
+}
+
+/* chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42vw;
+  margin: 0.37vh 0 1.3vh;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42vw;
+
+  padding: 0.74vh 0.52vw;
+  border-radius: 999px;
+  border: 1px solid #e2e2e2;
+  background: #fafafa;
+
+  font-size: 0.63vw;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.chip .dot {
+  width: 0.42vw;
+  height: 0.74vh;
+  border-radius: 999px;
+  background: #111;
+  opacity: 0.9;
+}
+
+.chip .k {
+  color: var(--muted);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+.chip .v {
+  color: var(--ink);
+}
+
+/* progress */
+.progressWrap {
+  border: 1px solid #e7e7e7;
+  border-radius: 0.73vw;
+  padding: 1.11vh;
+  background: #fbfbfb;
+  margin-bottom: 1.3vh;
+}
+
+.progressTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.52vw;
+  margin-bottom: 0.93vh;
+}
+
+.progressLabel {
+  color: var(--muted);
+  font-size: 0.63vw;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.progressValue {
+  font-variant-numeric: tabular-nums;
+  font-weight: 900;
+  font-size: 0.63vw;
+  color: #222;
+}
+
+.progressBar {
+  height: 0.93vh;
+  border-radius: 999px;
+  border: 1px solid #e2e2e2;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  width: 0%;
+  background: #111;
+  border-radius: 999px;
+  transition: width 200ms linear;
+}
+
+/* mission */
+.mission {
+  border-left: 0.21vw solid #111;
+  padding-left: 0.63vw;
+  margin-top: auto;
+}
+
+.missionTitle {
+  font-size: 0.63vw;
+  font-weight: 1000;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 0.56vh;
+  text-transform: uppercase;
+}
+
+.missionBody {
+  font-size: 0.83vw;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+/* right image */
+.hero-visual {
+  border-left: 1px dashed var(--line);
+  padding-left: 0.94vw;
+  min-height: 0;
+  display: flex;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 0.73vw;
+  background: #fafafa;
+  border: 1px solid #e7e7e7;
+  display: block;
+}
+
+/* ===== Minute (minutes + seconds fill) ===== */
+.minuteWrap {
+  flex: 0 0 auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.11vh 0.63vw 0.93vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.minuteBar {
+  height: 4.63vh;
+  display: flex;
+  gap: 0.31vw;
+  align-items: stretch;
+}
+
+/* 각 '분 칸' */
+.minuteBlock {
+  flex: 1 1 0;
+  border-radius: 0.52vw;
+  border: 1px solid #ddd;
+  background: #f6f6f6;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 칸 안에서 초에 따라 위로 차오르는 fill */
+.minuteFill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0%;
+  background: #111;
+  transition: height 120ms linear;
+}
+
+.metaRow {
+  margin-top: 0.93vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.52vw;
+}
+
+.clock {
+  font-variant-numeric: tabular-nums;
+  font-weight: 900;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.63vw;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px dashed var(--line);
+    padding-top: 1.3vh;
+  }
+  .mission {
+    margin-top: 1.67vh;
+  }
+
+  /* progressWrap 반응형 조정 */
+  .progressTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.42vw;
+  }
+
+  .progressLabel {
+    font-size: 0.57vw;
+  }
+
+  .progressValue {
+    font-size: 0.57vw;
+  }
+}
+
+/* 현재 초가 차오르는 칸 강조 */
+.minuteBlock.active .minuteFill {
+  background: #ff4fa3; /* 강조 색 (원하면 바꿔도 됨) */
+}
