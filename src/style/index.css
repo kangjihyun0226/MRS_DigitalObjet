@@ -22,7 +22,7 @@ body {
 
 .title {
   position: absolute;
-  top: 2vh;
+  top: 3vh;
   left: 50%;
   transform: translateX(-50%);
 
