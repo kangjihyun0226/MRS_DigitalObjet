@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap");
+
 @font-face {
   font-family: "PyeongchangPeace";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2")
@@ -11,6 +13,15 @@
 .share-tech {
   font-family: "Share Tech", sans-serif;
 }
+
+.saira-stencil {
+  font-family: "Saira Stencil", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 body {
   margin: 0;
   background-color: #000000;
@@ -22,9 +33,13 @@ body {
 
 .title {
   position: absolute;
-  top: 3vh;
+  display: flex;
+  top: 5vh;
   left: 50%;
   transform: translateX(-50%);
+
+  align-items: baseline;
+  gap: 5vh;
 
   text-align: center;
   color: white;
@@ -43,7 +58,7 @@ body {
 .title p {
   font-size: 1.1rem;
 
-  font-family: "PyeongchangPeace", "Noto Sans KR", sans-serif;
+  font-family: "Share Tech", sans-serif;
   color: white;
 }
 
