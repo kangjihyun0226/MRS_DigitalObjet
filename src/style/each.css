@@ -84,6 +84,7 @@ canvas {
 }
 
 .header-right {
+  font-family: "Noto Sans KR", sans-serif;
   text-align: right;
   line-height: 1.2;
 }
@@ -102,6 +103,7 @@ canvas {
 /* 상세 설명 부분 */
 .header-details {
   position: absolute;
+  font-family: "Noto Sans KR", sans-serif;
   padding: 20px 20%;
   text-align: center;
   z-index: 10000;
